@@ -38,9 +38,15 @@ public class User
 	private boolean enabled;
 	
 	@OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "user")
-	//private List<CartItem> cartItems;
+	private List<CartItem> cartItems;
 	
 	
+	public List<CartItem> getCartItems() {
+		return cartItems;
+	}
+	public void setCartItems(List<CartItem> cartItems) {
+		this.cartItems = cartItems;
+	}
 	public String getAuthority() {
 		return authority;
 	}
